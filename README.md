@@ -7,8 +7,8 @@ Single-file SQLite preservation database for Bandai WonderSwan. The public Catal
 | Item | Value |
 | --- | --- |
 | Original size | 287 source ZIPs, 150.5 MiB (No-Intro 258, RetroAchievements sets 29); 287 ROM files, 383.0 MiB uncompressed |
-| Stored size | populated database 81.2 MiB; public Catalog 3.9 MiB (no ROM data) |
-| Ratio | 54.0% of the source ZIPs, 21.2% of the uncompressed ROM files |
+| Stored size | populated database 81.4 MiB; public Catalog 4.0 MiB (no ROM data) |
+| Ratio | 54.1% of the source ZIPs, 21.3% of the uncompressed ROM files |
 | Technology | storage v4: SHA256-deduplicated 64 KiB blocks packed in No-Intro family order into solid LZMA2 groups of up to 256 MiB (256 MiB dictionary); per-block SHA256 and per-object CRC32/MD5/SHA1/SHA256 verification; source ZIPs reproduced byte-for-byte from TorrentZip plans |
 | Export performance | Intel(R) Core(TM) i7-8650U CPU @ 1.90GHz, idle, Python 3.14.4, all checks included. whole newest-DAT set with `export_set.py` (257 files, each checked against the DAT hashes): 53.2 MiB/s, 23 ms per file on average; single file with a cold cache (the group is decoded up to the file): ROM 2.225 s, TorrentZip 2.433 s on average |
 
@@ -36,7 +36,7 @@ Single-file SQLite preservation database for Bandai WonderSwan. The public Catal
 | DAT coverage per version | 20260525-011654: 257/257 |
 | Local ROMs in no DAT | 8 |
 | ROM files of the RetroAchievements set | in a No-Intro DAT 21, RA only 8, hash not in the latest RA snapshot 0 ([list](reports/ra-wswan-collection-unknown.csv)); RA games still without a local ROM: [gap list](reports/ra-wswan-missing.csv) |
-| No-Intro DB Export + Dump Log unknown | 257 archives, 278 file identities, 318 documented hardware assertions; Dump Log Verified 58 |
+| No-Intro DB Export + Dump Log 20260525-011654 | 257 archives, 278 file identities, 318 documented hardware assertions; Dump Log Verified 58 |
 | RetroAchievements (console 53) | 23 games with achievements: 23 with a local ROM (30 ROMs), 0 with the ROM in a sibling database, 0 DAT only, 0 DB file only, 0 without a No-Intro counterpart |
 | Chinese names | 148 of 264 rows translated (118 unique); 141 local ROMs have a Chinese name |
 | Populated-database audit | 268 objects, 1 groups, 269 archive plans, all passed |
