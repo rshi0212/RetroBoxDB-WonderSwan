@@ -7,8 +7,8 @@
 | 项目 | 数值 |
 | --- | --- |
 | 原始大小 | 源 ZIP 287 个，150.5 MiB（No-Intro 258 个，RetroAchievements 集合 29 个）；解压后 ROM 287 个，383.0 MiB |
-| 入库后大小 | 完整库 81.2 MiB；公开 Catalog 3.8 MiB（不含 ROM 数据） |
-| 比例 | 完整库为原 ZIP 的 53.9%，为解压后 ROM 总量的 21.2% |
+| 入库后大小 | 完整库 81.2 MiB；公开 Catalog 3.9 MiB（不含 ROM 数据） |
+| 比例 | 完整库为原 ZIP 的 54.0%，为解压后 ROM 总量的 21.2% |
 | 使用的技术 | 存储 v4：64 KiB 块按 SHA256 去重，按 No-Intro 游戏族顺序装入最大 256 MiB 的 LZMA2 实体组（字典 256 MiB）；逐块 SHA256、逐对象 CRC32／MD5／SHA1／SHA256 校验；源 ZIP 由 TorrentZip 配方逐字节重建 |
 | 导出性能 | Intel(R) Core(TM) i7-8650U CPU @ 1.90GHz，空闲负载，Python 3.14.4，含全部校验。按最新 DAT 整套导出（`export_set.py`，257 个文件，逐个按 DAT 哈希校验）：53.2 MiB/s，平均 23 毫秒／个；单个文件冷缓存（每次清空缓存，需解压所在组的前段）：ROM 平均 2.225 秒，TorrentZip 平均 2.433 秒 |
 
@@ -19,11 +19,11 @@
 | [RetroBoxDB.WonderSwan.Catalog.sqlite](https://github.com/rshi0212/RetroBoxDB-WonderSwan/releases/latest/download/RetroBoxDB.WonderSwan.Catalog.sqlite) | 公开 Catalog（Release 附件，附 `SHA256SUMS`） |
 | [存储 v4 说明](RetroBoxDB.Storage-v4.zh-CN.md)／[English](RetroBoxDB.Storage-v4.en.md) | 各平台的存储评估、内容、RA、中文名与维护 |
 | [Technical design](RetroBoxDB.Storage-v4.Technical-Design.en.md) | 存储格式、平台适配、增量更新、校验 |
-| [RA 清单](reports/ra-ws-games.csv)／[汇总](reports/ra-ws.json)、[构建报告](reports/ws-build-report.json)、[审计处理](reports/audit-resolution-20261004.md) | 逐项数据 |
+| [RA 清单](reports/ra-wswan-games.csv)／[汇总](reports/ra-wswan.json)、[构建报告](reports/wswan-build-report.json)、[审计处理](reports/audit-resolution-20261004.md) | 逐项数据 |
 
 ## 本平台的存储选择与特殊情况
 
-全部本地收藏实测 18 种块／组组合（`assessment/data/storage-experiment-ws.json`）：最小为 256 KiB / 256 MiB 75.63 MiB；按规则（最小值 0.5% 以内选块最小、再选组最小）采用 64 KiB / 256 MiB 75.97 MiB。ZIP 150.46 MiB，逐文件 LZMA 100.84 MiB。
+全部本地收藏实测 18 种块／组组合（`assessment/data/storage-experiment-wswan.json`）：最小为 256 KiB / 256 MiB 75.63 MiB；按规则（最小值 0.5% 以内选块最小、再选组最小）采用 64 KiB / 256 MiB 75.97 MiB。ZIP 150.46 MiB，逐文件 LZMA 100.84 MiB。
 
 - 页尾：文件最后 16 字节（远跳转、发行商、彩色标志、游戏 ID、版本、容量、存档类型与大小、方向、总线宽度、RTC，以及其余全部字节的 16 位和）存入 `ws_hardware`。WonderWitch 自制软件的页尾是默认值（校验和为 0），校验和告警大多来自这类文件。
 - RetroAchievements 把 WonderSwan 和 WonderSwan Color 放在同一个主机（53）和同一个目录下。两个库都导入该目录：本库收 `.ws` 文件，`.wsc` 文件跳过，由 [RetroBoxDB-WonderSwanColor](https://github.com/rshi0212/RetroBoxDB-WonderSwanColor) 收录。RA 报告只统计与本库有关的游戏。
@@ -35,7 +35,7 @@
 | ROM 记录／游戏组／发行版本 | 265／228／257 |
 | 各版 DAT 覆盖 | 20260525-011654：257/257 |
 | 不在任何 DAT 的本地 ROM | 8 |
-| RetroAchievements 集合中的 ROM 文件 | DAT 中有 21，仅 RA 收录 8，哈希不在最新 RA 快照 0（[清单](reports/ra-ws-collection-unknown.csv)）；仍缺本地 ROM 的 RA 游戏见 [缺口清单](reports/ra-ws-missing.csv) |
+| RetroAchievements 集合中的 ROM 文件 | DAT 中有 21，仅 RA 收录 8，哈希不在最新 RA 快照 0（[清单](reports/ra-wswan-collection-unknown.csv)）；仍缺本地 ROM 的 RA 游戏见 [缺口清单](reports/ra-wswan-missing.csv) |
 | No-Intro DB Export＋Dump Log unknown | 257 个档案、278 个文件身份、318 条有文档的硬件声明；Dump Log Verified 58 |
 | RetroAchievements（console 53） | 有成就的游戏 23 个：本地有 ROM 23（30 个 ROM），ROM 在兄弟库中 0，仅 DAT 有 0，仅 DB 文件 0，无 No-Intro 对应 0 |
 | 中文名 | 264 条记录中 148 条有中文（118 个唯一名）；本地 ROM 141 个有中文名 |
