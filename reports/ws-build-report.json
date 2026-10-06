@@ -1,0 +1,235 @@
+{
+  "platform": "ws",
+  "started_at": "2026-10-06T07:15:22.147445+00:00",
+  "engine_version": "4.0.0",
+  "dat_sets": [
+    {
+      "id": 1,
+      "name": "Bandai - WonderSwan (Parent-Clone)",
+      "version": "20260525-011654"
+    }
+  ],
+  "completed_stages": [
+    "dat_import",
+    "rom_import",
+    "scan_diff_catalog",
+    "nointro",
+    "packages",
+    "retroachievements",
+    "game_names"
+  ],
+  "rom_import": {
+    "directories": [
+      "/mnt/MyShare/No-Intro/Bandai - WonderSwan"
+    ],
+    "families": 228,
+    "family_assignment": {
+      "family_from_dat_or_db": 258
+    },
+    "errors": [],
+    "groups": 1,
+    "raw_group_bytes": 212996096,
+    "stored_group_bytes": 78851093,
+    "zips": 258,
+    "sidecar_files": 0,
+    "seconds": 159
+  },
+  "scan": {
+    "1": {
+      "match": 257,
+      "mismatch": 0,
+      "unverifiable": 0,
+      "no_candidate": 0
+    }
+  },
+  "dat_diff": {},
+  "catalog": {
+    "games": 228,
+    "releases": 257,
+    "old_dat_games_linked": 0,
+    "rom_release_links": 257
+  },
+  "nointro": {
+    "snapshot_id": 1,
+    "version": "unknown",
+    "archives": 257,
+    "files": 278,
+    "files_with_local_payload": 257,
+    "sources": 485,
+    "dumplog_rows": 257,
+    "dat_links": 257,
+    "archive_release_links": 256,
+    "hardware_assertions": 318,
+    "dumplog_status": {
+      "trusted_unverified": 199,
+      "verified": 58
+    },
+    "anomalies": {
+      "file_without_sha256": 126
+    }
+  },
+  "packages": {
+    "packages_by_dat_set": {
+      "1": 257
+    },
+    "errors": []
+  },
+  "retroachievements": {
+    "snapshot_id": 1,
+    "console_id": 53,
+    "fetched_at": "2026-10-06T07:18:11.177699+00:00",
+    "games": 240,
+    "hashes": 263,
+    "games_with_achievements": 57,
+    "hashes_of_games_with_achievements": 76,
+    "local_roms_matched": 22,
+    "ra_games_with_local_rom": 22,
+    "dat_entries_matched": 22,
+    "ra_games_in_any_dat": 22,
+    "hashes_with_achievements_unexplained": 54,
+    "by_category_local": {
+      "Official": 22
+    }
+  },
+  "game_names": {
+    "source_name": "Bandai - WonderSwan.csv",
+    "source_sha256": "ae34dc5f4b42bcee4d508179366209198b94746ecb9841d3c5947e56f0e2e6a6",
+    "normalization_version": "parentheses-whitespace-casefold-v1",
+    "import_id": 1,
+    "matching_version": "game-qualified-title-v1",
+    "rows": 264,
+    "rows_with_chinese": 148,
+    "unique_chinese_names": 118,
+    "normalized_titles": 238,
+    "matched_rows": 257,
+    "matched_rows_with_chinese": 141,
+    "matched_releases": 257,
+    "releases_with_chinese": 141,
+    "matched_games": 228,
+    "matched_roms": 257,
+    "matched_links": 257,
+    "ambiguous_links": 0,
+    "ambiguous_rows": 0,
+    "unmatched_rows": 7,
+    "unresolved_rows": [
+      {
+        "row_number": 259,
+        "name_en": "Engacho! (Japan) [CHS]",
+        "name_cn": "返家十万里",
+        "status": "unmatched"
+      },
+      {
+        "row_number": 260,
+        "name_en": "Digimon 02 - Tag Tamers (Japan) [T-En by NikcDC v1.4.5] [n]",
+        "name_cn": "数码宝贝 02 - 附属团队",
+        "status": "unmatched"
+      },
+      {
+        "row_number": 261,
+        "name_en": "Digimon 02 - Tag Tamers (Japan) [T-En by NikcDC v1.4.5] [n] [Digimon 01 Diaboromon]",
+        "name_cn": "数码宝贝 02 - 附属团队",
+        "status": "unmatched"
+      },
+      {
+        "row_number": 262,
+        "name_en": "Klonoa - Moonlight Museum (Japan) [T-En by PowerStone05 & RayCarrot & Rcs709 & StarryScarab v1.1] [n]",
+        "name_cn": "风之克罗诺亚 - 月光博物馆",
+        "status": "unmatched"
+      },
+      {
+        "row_number": 263,
+        "name_en": "Megaman & Bass - Challenger from the Future (Japan) [T-En by NikcDC v1.2.1] [n]",
+        "name_cn": "洛克人与佛鲁迪 - 未来的挑战",
+        "status": "unmatched"
+      },
+      {
+        "row_number": 264,
+        "name_en": "Neon Genesis Evangelion - Angel Raising Project (Japan) [T-En by Anime Game Translations Team v1.0] [n]",
+        "name_cn": "新世纪福音战士 - 使徒育成",
+        "status": "unmatched"
+      },
+      {
+        "row_number": 265,
+        "name_en": "Rockman & Forte - Challenger from the Future (Japan) [T-En by NikcDC v1.2.1] [n]",
+        "name_cn": "洛克人与佛鲁迪 - 未来的挑战",
+        "status": "unmatched"
+      }
+    ],
+    "multiple_translation_keys": [],
+    "matched_rows_by_method": {
+      "exact_title": 256,
+      "qualified_title": 1
+    }
+  },
+  "audit": {
+    "integrity_check": [
+      "ok"
+    ],
+    "foreign_key_errors": [],
+    "objects_checked": 260,
+    "archive_plans_checked": 261,
+    "compression_groups_checked": 1,
+    "historical_zip_objects": 261,
+    "ok": true,
+    "errors": []
+  },
+  "stats": {
+    "counts": {
+      "files": 779,
+      "objects": 521,
+      "chunks": 3254,
+      "roms": 257,
+      "dat_sets": 1,
+      "dat_roms": 257,
+      "transformations": 0,
+      "packages": 257,
+      "media": 0
+    },
+    "storage": {
+      "logical_content_bytes": 336553467,
+      "historical_zip_bytes_not_stored": 127492272,
+      "unique_raw_chunk_bytes": 213476859,
+      "stored_chunk_bytes": 78922184,
+      "header_body_recipes": 0,
+      "zip_plans": 261,
+      "file_occurrences": 779,
+      "catalog_objects": 521
+    },
+    "dat_coverage": [
+      {
+        "dat_set_id": 1,
+        "status": "matched",
+        "count": 257
+      }
+    ],
+    "codecs": [
+      {
+        "codec": "group",
+        "blocks": 3251,
+        "raw_bytes": 212996096,
+        "stored_bytes": 0
+      },
+      {
+        "codec": "lzma",
+        "blocks": 3,
+        "raw_bytes": 480763,
+        "stored_bytes": 71091
+      }
+    ],
+    "storage_schema_version": 4,
+    "compression_groups": {
+      "groups": 1,
+      "raw_bytes": 212996096,
+      "stored_bytes": 78851093
+    },
+    "platform": "ws",
+    "solid_groups": {
+      "groups": 1,
+      "raw_bytes": 212996096,
+      "stored_bytes": 78851093
+    }
+  },
+  "finished_at": "2026-10-06T07:18:38.588271+00:00",
+  "seconds": 198,
+  "database_bytes": 84819968
+}
